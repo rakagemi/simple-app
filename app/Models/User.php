@@ -9,15 +9,18 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use  Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    protected $table = 'users';
     protected $fillable = [
         'name',
+        'alamat',
+        'no_hp',
         'email',
         'password',
     ];
@@ -40,4 +43,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function user_status()
+    {
+        return $this->HasMany(UserStatus::Class, 'id_user', 'id');
+    }
 }
