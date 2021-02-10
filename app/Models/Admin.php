@@ -2,29 +2,24 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Models\UserStatus;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
-    use  Notifiable;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $table = 'users';
+    protected $table = 'admin';
     protected $fillable = [
-        'id',
-        'name',
-        'alamat',
-        'no_hp',
-        'email',
-        'password'
+        'nama', 'email', 'password','alamat','no_hp','aktif'
     ];
 
     /**
@@ -33,8 +28,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password', 'remember_token',
     ];
 
     /**
@@ -45,9 +39,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function user_status()
-    {
-        return $this->HasMany(UserStatus::Class, 'id_user', 'id');
-    }
 }
