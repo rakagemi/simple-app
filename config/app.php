@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'urlApi' => 'https://localhost:8000/api/',
     'APIKEY' => 'request',
     '_method' => 'PUT',
 

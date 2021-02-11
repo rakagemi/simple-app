@@ -36,3 +36,5 @@ Route::prefix('/user/status')->group(function () {
     Route::put('/edit/{id?}', 'UserStatusController@update');
     Route::delete('/delete/{id?}', 'UserStatusController@destroy');
 });
+
+

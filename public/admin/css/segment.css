@@ -1,0 +1,49 @@
+.ui-segment {
+    color: rgb(0, 122, 255);
+    border: 1px solid rgb(0, 122, 255);
+    border-radius: 50vh;
+    display: inline-block;
+    font-family: "Nunito", "Segoe UI", arial;
+}
+
+.ui-segment span.option.active {
+    background-color: rgb(0, 122, 255);
+    color: white;
+}
+
+.ui-segment span.option.active:hover {
+    cursor: default;
+}
+
+.ui-segment span.option {
+    font-size: 13px;
+    padding-left: 23px;
+    padding-right: 23px;
+    height: 25px;
+    text-align: center;
+    display: inline-block;
+    line-height: 25px;
+    margin: 0px;
+    float: left;
+    border-radius: 50vh 0 0 50vh;
+    cursor: pointer;
+    border-right: 1px solid rgb(0, 122, 255);
+}
+
+.ui-segment span.option:hover {
+    background-color: rgb(0, 122, 255);
+    color: white;
+}
+
+.ui-segment span.option:nth-child(2) {
+    border-radius: 0vh;
+}
+
+.ui-segment span.option:last-child {
+    border-radius: 0 50vh 50vh 0;
+    border-right: none;
+}
+
+.segment-select {
+    display: none;
+}

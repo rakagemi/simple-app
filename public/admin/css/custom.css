@@ -1,0 +1,68 @@
+/**
+ *
+ * You can write your CSS code here, DO NOT touch the default JavaScript file
+ * because it will make it harder for you to update.
+ *
+ */
+
+/*# sourceMappingURL=custom.css.map */
+
+.modal-content {
+    max-height: 90vh;
+}
+
+.modal-body {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.modal-body::-webkit-scrollbar,
+.modal-body::-webkit-scrollbar-thumb {
+    width: 26px;
+    border-radius: 13px;
+    background-clip: padding-box;
+    border: 10px solid transparent;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 0 10px;
+}
+
+.modal-body:hover {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-body {
+    color: rgba(0, 0, 0, 0);
+    transition: color .3s ease;
+}
+
+label.btn {
+    cursor: pointer;
+}
+
+.custom-file-input:hover {
+    cursor: pointer;
+}
+
+.disabled:hover {
+    cursor: not-allowed;
+}
+
+p {
+    color: black;
+}
+
+.accordion {
+    color: #78828A;
+}
+
+.accordion .choice:hover {
+    cursor: pointer;
+}
+
+.key {
+    text-align: right;
+    background-color: rgba(250, 250, 250, 1);
+    max-width: 25%;
+}

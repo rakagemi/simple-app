@@ -166,6 +166,7 @@ class UserStatusController extends Controller
                 return response()->json([
                     'success' => true,
                     'message' => 'User Status Berhasil Diupdate!',
+                    'data' => $user_status,
                 ], 200);
             } else {
                 return response()->json([

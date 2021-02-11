@@ -16,7 +16,7 @@ class UsersStatus extends Migration
         Schema::create('users_status', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('id_user');
-            $table->string('status');
+            $table->enum('status', ['active','inactive']);
             $table->string('position');
             $table->timestamps();
         });
